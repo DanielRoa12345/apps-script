@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZTu0kjDiqpUSiFcDCL27A7-aCzA3etvg"
+    async defer></script>
+  <script>
+function actualizarDiv(html, button) {
+var div = document.getElementById('resultado');
+div.innerHTML = html;
+}
+
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="contact form example">
+<title>Consultoria Emcopetetrol</title>
+    <base target="_top">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+  </head>
+  <body >
+  
+  <h2 class="content-head is-center"><MARQUEE WIDTH=50% HEIGHT=60 ALIGN=BOTTOM ><em>CONSULTORIA EMCOPETROL!</em></MARQUEE>
+  
+  </h2>
+  
+<form>
+     <div class="text-center" >
+     <input href="#" type="button" class="btn btn-warning" value="Ingresar Empresas" 
+      onclick="google.script.run
+          .withSuccessHandler(actualizarDiv)
+          .withUserObject(this)
+          .getEmpresas()"  />
+             
+      
+      <input href="#" type="button" class="btn btn-warning" value="Crear Indicadores"
+      onclick="google.script.run
+          .withSuccessHandler(actualizarDiv)
+          .withUserObject(this)
+          .getIndicadores()" />
+     
+     
+     <input href="#" type="button" class="btn btn-warning" value="Crear Tecnologias"
+      onclick="google.script.run
+          .withSuccessHandler(actualizarDiv)
+          .withUserObject(this)
+          .getTecnologias()" />
+          
+      <input href="#" type="button" class="btn btn-warning" value="Empresas - Tecnologías"
+      onclick="google.script.run
+          .withSuccessHandler(actualizarDiv)
+          .withUserObject(this)
+          .getEmpresas_Tecnologias()" />
+     
+     
+      <input href="#" type="button" class="btn btn-warning"  value="Lecciones"
+      onclick="google.script.run
+          .withSuccessHandler(actualizarDiv)
+          .withUserObject(this)
+          .getLecciones()" />
+    
+    
+     <input href="#" type="button" class="btn btn-warning"  value="Graficos"
+      onclick="google.script.run
+          .withSuccessHandler(actualizarDiv)
+          .withUserObject(this)
+          .getGraficos()" />
+          
+
+</div>
+
+
+
+     <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+</form>
+
+<div id="resultado" >
+
+<div id="chart_div" style="width: 100%; height: 500px;"></div>
+
+</div>
+
+<!-- START HERE  Botones--> 
+
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/style.css">
+</body>
+</html>
+
+

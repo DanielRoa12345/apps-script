@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    
+     </head>
+  <body>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+<!--Formulario crear Empresa -->
+<iframe name='hidden-iframe' style='display: none'></iframe>
+<form id='google-form' method='post' target='hidden-iframe'  action='https://script.google.com/a/unbosque.edu.co/macros/s/AKfycbxX1ihVyJ5oN3g2CH5sZocY-RPk6QMDbElOj0Xs0tqFNjnF6poA/exec'>
+<div class="container">
+
+
+<div class="row">
+<div class="col-md-6">
+<label for="validationDefault01" name='Nit'>Nit</label>
+<input type="text" name='Nit' class="form-control" id="validationDefault01" placeholder="Nit" value="" required>
+</div>
+<div class="col-md-6">
+<label for="validationDefault02">Nombre Empresa</label>
+<input type="text" name='Nombre'class="form-control" id="validationDefault02" placeholder="Nombre" value="" required>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-md-6">
+<label for="validationDefault03">Gerente</label>
+<input type="text" name='Gerente'class="form-control" id="validationDefault03" placeholder="Gerente" required>
+<div class="invalid-feedback">
+Por favor ingrese nombre correcto.
+</div>
+</div>
+<div class="col-md-3">
+<label for="validationDefault04">Ciudad</label>
+<select class="form-control" name="Ciudad">
+  <option>Bogotá</option>
+  <option>Neiva</option>
+  <option>Cali</option>
+  <option>Medellin</option>
+  <option>Cartagena</option>
+</select>
+<div class="invalid-feedback">
+
+</div>
+</div>
+<div class="col-md-3">
+<label for="validationDefault05">Dirección</label>
+<input type="text" name='Direccion'class="form-control" id="validationDefault05" placeholder="Direccion" required>
+<div class="invalid-feedback">
+
+</div>
+
+</div>
+</div>
+
+
+
+<div class="row">
+<div class="col-md-6 mb-3">
+<label for="validationDefault03">Telefono</label>
+<input type="tel" name='Telefono'class="form-control" id="validationDefault03" placeholder="Telefono" required>
+<div class="invalid-feedback">
+
+</div>
+</div>
+<div class="col-md-3 mb-3">
+<label for="validationDefault04">Celular</label>
+<input type="tel" name='Celular'class="form-control" id="validationDefault04" placeholder="Celular" required>
+<div class="invalid-feedback">
+
+</div>
+</div>
+<div class="col-md-3 mb-3">
+<label for="validationDefault05">Email</label>
+<input type="email" name='Email'class="form-control" id="validationDefault05" placeholder="Email" required>
+<div class="invalid-feedback">
+
+
+<span id="correo invalido" style="display:none">
+Correo electronico</span>
+</div>
+
+
+</div>
+
+</div>
+<div class="row">
+<div class="col-md-6 mb-3">
+<label for="validationDefault04">Tecnología</label>
+<!-- <select class="form-control" name="Ciudad">
+  <option ></option>
+</select> -->
+<input type="text" name='Tecnologia'class="form-control" id="validationDefault05" placeholder="Tecnologia" required>
+<div class="invalid-feedback">
+</div>
+</div>
+</div>
+
+<div class="col-sm-12 col-xs-12" style="margin-top : 20px ">
+<div class="btn-toolbar">
+<button class="button-success pure-button button-xlarge" form="google-form" style="margin-left : 10px">
+<i class="fa fa-paper-plane"></i>&nbsp;Enviar   </button>
+
+<button class=" button-success pure-button button-xlarge"  type="reset" value="Reset" Reset>
+<i class="fa fa-paper-plane"></i>&nbsp;Cancelar  </button>
+
+
+</div>
+</div>
+
+</div>
+</form>
+
+<form id='google-form' method='get' target='hidden-iframe'  action='https://script.google.com/a/unbosque.edu.co/macros/s/AKfycbxX1ihVyJ5oN3g2CH5sZocY-RPk6QMDbElOj0Xs0tqFNjnF6poA/exec'>
+<div class="text-center" >
+     <input href="#" type="button" class="btn btn-warning" value="Consultar empresas" 
+      onclick="google.script.run
+          .withSuccessHandler(actualizarDiv)
+          .withUserObject(this)
+          .getConsultaEmpresas()"
+/>
+</div>
+</form>
+
+</body>
+</html>
+
+

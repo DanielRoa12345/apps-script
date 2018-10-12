@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZTu0kjDiqpUSiFcDCL27A7-aCzA3etvg&callback=initMap"
+    async defer></script>
+   
+<!-- Formulario indicadores -->
+<iframe name='hidden-iframe' style='display: none'></iframe>
+<form id='google-form' method='post' target='hidden-iframe' action='https://script.google.com/a/unbosque.edu.co/macros/s/AKfycbyIkXIPBNcWM0K31Nn3b1V3WI3sHet9gZqGQDJsop7pK4Mxjw1Z/exec'>
+<div class="container">
+
+<div class="row">
+<div class="col-md-6">
+<label for="validationDefault01" name='CodigoI'>Codigo Indicadores</label>
+<input type="text" name='CodigoI' class="form-control" id="validationDefault01" placeholder="Codigo Indicador" value="" required>
+</div>
+<div class="col-md-6">
+<label for="validationDefault02">Nombre Indicador</label>
+<input type="text" name='NombreI'class="form-control" id="validationDefault02" placeholder="Nombre Indicador" value="" required>
+</div>
+
+</div>
+</div>
+<div class="col-sm-12 col-xs-12" style="margin-top : 20px ">
+<button class="button-success pure-button button-xlarge" form="google-form" style="margin-left : 10px">
+<i class="fa fa-paper-plane"></i>&nbsp;Enviar  </button>
+
+<button class=" button-success pure-button button-xlarge"  type="reset" value="Reset" Reset>
+<i class="fa fa-paper-plane"></i>&nbsp;Cancelar  </button>
+
+</div>  
+</form>
+
+<form id='google-form' method='get' target='hidden-iframe'  action='https://script.google.com/a/unbosque.edu.co/macros/s/AKfycbxX1ihVyJ5oN3g2CH5sZocY-RPk6QMDbElOj0Xs0tqFNjnF6poA/exec'>
+
+<div class="text-center" >
+     <input href="#" type="button"  class="btn btn-warning" value="Consultar Indicadores" 
+      onclick="google.script.run
+          .withSuccessHandler(actualizarDiv)
+          .withUserObject(this)
+          .getConsultaIndicadores()" 
+          />
+</div>
+</form>
+<br>
+<form id='google-form' method='get' target='hidden-iframe'  action='https://script.google.com/a/unbosque.edu.co/macros/s/AKfycbxX1ihVyJ5oN3g2CH5sZocY-RPk6QMDbElOj0Xs0tqFNjnF6poA/exec'>
+<div class="text-center" >
+     <input href="#" type="button"  class="btn btn-warning" value="Registrar Indicadores * Empresas" 
+      onclick="google.script.run
+          .withSuccessHandler(actualizarDiv)
+          .withUserObject(this)
+          .getIndicadores_Empresas()" 
+/>
+</div>
+
+</form>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  </body>
+</html>

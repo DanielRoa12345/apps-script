@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+     
+     
+<!-- Formulario indicadores_Empresas -->
+<iframe name='hidden-iframe' style='display: none'></iframe>
+<form id='google-form' method='post' target='hidden-iframe' action='https://script.google.com/macros/s/AKfycbx-2ybTyaUAwIbWyxb9L7RrpWfEMUMKH5ADTurlx2ZeMhhqA3o/exec'>
+<div class="container">
+
+<div class="row">
+<div class="col-md-6">
+<label for="validationDefault04">Empresa</label>
+<select class="form-control" name="Empresa">
+<option>Inspecol NDT</option>
+</select>
+</div>
+<div class="col-md-6">
+<label for="validationDefault04">Indicador</label>
+<select class="form-control" name="Indicador">
+
+<option>Ventas Totales</option>
+<option>Aumento de facturación</option>
+<option>Ingresos mensuales</option>
+<option>Ordenes de trabajo</option>
+<option>Cantidad de clientes actuales potenciales</option>
+<option> Nuevos clientes captados</option>
+<option>Número de clientes Fidelizados</option>
+<option>Índice de satisfacción del cliente </option>
+<option>Deserción de clientes</option>
+<option>Visitas a la página web</option>
+<option>Likes Redes Sociales</option>
+<option>Comentarios en páginas web</option>
+<option>Manejo de redes sociales</option>
+<option>Cantidad de correos recibidos</option>
+<option>Tiempo en procesos</option>
+<option>Procesos sistematizados</option>
+<option>Cantidad de empleados</option>
+<option>Aumento trabajo captación de clientes</option>
+<option>Cantidad de empleados</option>
+<option>Capacitaciones</option>
+</select>
+</div>
+
+<div class="col-md-6">
+<label for="validationDefault05" name='CodigoI'>Valor Inicial</label>
+<input type="text" name='Valor_Inicial' class="form-control" id="validationDefault01" placeholder="Valor_Inicial" value="" required>
+</div>
+
+
+
+<div class="col-md-6">
+<label for="validationDefault02">Valor Actual</label>
+<input type="text" name='Valor_Actual'class="form-control" id="validationDefault02" placeholder="Valor_Actual" value="" required>
+</div>
+</div>
+
+<br>
+
+<div class="col-md-6">
+<label for="validationDefault02">Notas </label>
+<input type="text" name='Notas'class="form-control" id="validationDefault02" placeholder="Notas" value="" required>
+
+</div>
+</div>
+
+<div class="col-sm-12 col-xs-12" style="margin-top : 20px ">
+<button class="button-success pure-button button-xlarge" form="google-form" style="margin-left : 10px">
+<i class="fa fa-paper-plane" style="margin-left : 20px" ></i>&nbsp;Enviar  </button >
+
+<button class=" button-success pure-button button-xlarge"  type="reset" value="Reset" Reset>
+<i class="fa fa-paper-plane"></i>&nbsp;Cancelar  </button>
+</div>  
+</form>
+
+<form id='google-form' method='get' target='hidden-iframe'  action='https://script.google.com/a/unbosque.edu.co/macros/s/AKfycbxX1ihVyJ5oN3g2CH5sZocY-RPk6QMDbElOj0Xs0tqFNjnF6poA/exec'>
+<div class="text-center" >
+     <input href="#" type="button" class="btn btn-warning" value="Resultado Indicadores empresas"
+      onclick="google.script.run
+          .withSuccessHandler(actualizarDiv)
+          .withUserObject(this)
+          .getResultadoEmpresas()"
+/>
+</div>
+</form>
+
+
+
+
+  </body>
+</html>
+

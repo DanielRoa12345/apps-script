@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+<!--Formulario crear Empresa -->
+<iframe name='hidden-iframe' style='display: none'></iframe>
+<form id='google-form' method='post' action='https://script.google.com/macros/s/AKfycbzgzaMX06mljEa8NSAfxYJzzYCTOS_bxbSVGNpsburslDuUSvo/exec'>
+ 
+<div class="container">
+
+<div class="row">
+<div class="col-md-6" style=" margin-left: 300px;margin-top:10px;" >
+<label for="validationDefault04">Empresa</label>
+<select class="form-control" name="Empresa">
+  <option>INSPECOL NDT</option>
+</select>
+
+</div>
+
+</div>
+</div>
+</form>
+
+
+
+<form id='google-form' method='get' target='hidden-iframe'  action='https://script.google.com/a/unbosque.edu.co/macros/s/AKfycbxX1ihVyJ5oN3g2CH5sZocY-RPk6QMDbElOj0Xs0tqFNjnF6poA/exec'>
+<div class="text-center" style="margin-top:20px;" >
+     <input href="#" type="button" class="btn btn-warning" value="Consultar Tecnologías en Empresas" 
+      onclick="google.script.run
+          .withSuccessHandler(actualizarDiv)
+          .withUserObject(this)
+          .getConsultaTecnologias()"
+/>
+</div>
+
+
+</form>
+
+</body>
+</html>

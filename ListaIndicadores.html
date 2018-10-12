@@ -1,0 +1,29 @@
+<html>
+  <head>
+  
+ <script>
+  function Response(string)
+  {
+  document.getElementsByName("Indicadores_DB")[0].innerHTML = string;
+  }
+  
+  function InitWeb()
+  {
+  google.script.run.withSuccessHandler(Response).getConsultaIndicadores();
+  }
+  </script>
+  </head>
+  <body>
+    <script>
+    InitWeb();
+    </script>
+    
+ <table name='Indicadores_DB'align="center" width="100%" cellspacing="1" cellpadding="1" border="1" ROWSPAN=2>
+    <td colspan="4" align="center" bgcolor="666666"> <font color="#FFFFFF"></font> </td>
+    <p> Loading.... wait</p>
+</table>
+ 
+  </body>
+</html>
+
+

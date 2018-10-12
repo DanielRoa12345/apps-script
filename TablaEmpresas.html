@@ -1,0 +1,31 @@
+<html>
+<body>
+<select id = 'cmbDependencia' name ='dependencia' style='width: 575px'>
+                                          <? for(var i=0; i<DEPENDENCIAS.length; i++){ ?>
+                                          <option value='<?=DEPENDENCIAS[i][0]?>'><?=DEPENDENCIAS[i][1]?></option>
+                                          <?}?>
+</select>
+
+<script>
+
+         
+//ESTO ES DEL LADO DEL HTML
+//Función para cargar las tablas de ARCHIVOS, PARTICIPANTES, RUBROS Y METAS de un proyecto creado.
+         function cargarTablas()
+         {
+           <?if(INFPROYECTO[0] != -1) { ?>
+            cargarArchivosProy();  
+            cargarIntegrantesProy();
+            cargarRubrosProyecto();
+            cargarMetasProyecto();
+            document.getElementById('btnCancelarProy').disabled = true; 
+           <?}?>  
+         }  
+         
+  function cargarArchivosProy(){
+           google.script.run.withSuccessHandler().queryHoja("Base_Datos_empresas", "4", "2=77666"
+         }
+
+ </script>          
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZTu0kjDiqpUSiFcDCL27A7-aCzA3etvg&callback=initMap"
+    async defer></script>
+<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+<div id="chartdiv"></div>						
+  </head>
+  <body>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+<!-- Formulario Tecnologia -->
+<iframe name='hidden-iframe' style='display: none'></iframe>
+<form id='google-form' method='post' target='hidden-iframe' action='https://script.google.com/a/unbosque.edu.co/macros/s/AKfycbyC8va56ajqr1UGznmI2NpHow3edwygtiCeyM6ro7htxJ2x1uQ/exec'>
+<div class="container">
+
+<div class="row">
+<div class="col-md-6">
+<label for="validationDefault01" name='CodigoI'>Codigo Tecnologia</label>
+<input type="text" name='Codigo_T' class="form-control" id="validationDefault01" placeholder="Codigo Tecnologias" value="" required>
+</div>
+<div class="col-md-6">
+<label for="validationDefault02">Tipo Tecnologia</label>
+<input type="text" name='TipoTecnologia'class="form-control" id="validationDefault02" placeholder="Tipo Tecnologia" value="" required>
+</div>
+
+<div class="row">
+<div class="col-md-6">
+<label for="validationDefault01" name='CodigoI'>Nombre Tecnologias</label>
+<input type="text" name='Nombre_T' class="form-control" id="validationDefault01" placeholder="Nombre Tecnologias" value="" required>
+</div>
+<div class="col-md-6">
+<label for="validationDefault02">Versión Tecnologias</label>
+<input type="text" name='Versión_T'class="form-control" id="validationDefault02" placeholder="Versión Tecnologias" value="" required>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-6">
+<label for="validationDefault01" name='CodigoI'>Costo Tecnologias</label>
+<input type="text" name='Costo_T' class="form-control" id="validationDefault01" placeholder="Costo Tecnologias" value="" required>
+</div>
+<div class="col-md-6">
+<label for="validationDefault02">Software Libre</label>
+<input type="text" name='SoftwareL'class="form-control" id="validationDefault02" placeholder="Software Libre" value="" required>
+</div>
+</div>
+
+</div>
+</div>
+<div class="col-sm-12 col-xs-12" style="margin-top : 25px ">
+<button class="button-success pure-button button-xlarge" form="google-form" style="margin-left : 20px">
+<i class="fa fa-paper-plane"></i>&nbsp;Enviar  </button>
+
+<button class=" button-success pure-button button-xlarge"  type="reset" value="Reset" Reset>
+<i class="fa fa-paper-plane"></i>&nbsp;Cancelar  </button>
+
+</div>  
+</form>
+
+<form id='google-form' method='get' target='hidden-iframe'  action='https://script.google.com/a/unbosque.edu.co/macros/s/AKfycbxX1ihVyJ5oN3g2CH5sZocY-RPk6QMDbElOj0Xs0tqFNjnF6poA/exec'>
+<div class="text-center" >
+     <input href="#" type="button" class="btn btn-warning" value="Consultar Tecnologías" 
+      onclick="google.script.run
+          .withSuccessHandler(actualizarDiv)
+          .withUserObject(this)
+          .getConsultaTecnologias()"
+/>
+</div>
+</form>
+  </body>
+</html>

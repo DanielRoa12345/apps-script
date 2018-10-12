@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+<!--Formulario crear Empresa -->
+<iframe name='hidden-iframe' style='display: none'></iframe>
+<form id='google-form' method='post' action='https://script.google.com/macros/s/AKfycbxqaPEDpQ0ankYC11tFc-Pb1-BHVywySGVbETcSmdYHlMB3W84/exec'>
+ 
+<div class="container">
+
+
+<div class="row">
+<div class="col-md-6">
+<label for="validationDefault04">Empresa</label>
+<select class="form-control" name="EMPRESA">
+  <option>INSPECOL NDT</option>
+</select>
+
+</div>
+<div class="col-md-6">
+<label for="validationDefault04">Descripcion</label>
+<label for="validationDefault03">Experiencia</label>
+<input type="text" name='LECCION'class="form-control" id="validationDefault03" placeholder="Descripcion" required>
+
+</div>
+</div>
+</div>
+<div class="col-sm-12 col-xs-12" style="margin-top : 20px ">
+
+<button class="button-success pure-button button-xlarge" form="google-form" style="margin-left : 20px">
+<i class="fa fa-paper-plane"></i>&nbsp;Enviar  </button>
+
+<button class=" button-success pure-button button-xlarge"  type="reset" value="Reset" Reset>
+<i class="fa fa-paper-plane"></i>&nbsp;Cancelar  </button>
+</div>
+</form>
+
+<form id='google-form' method='get' target='hidden-iframe'  action='https://script.google.com/a/unbosque.edu.co/macros/s/AKfycbxX1ihVyJ5oN3g2CH5sZocY-RPk6QMDbElOj0Xs0tqFNjnF6poA/exec'>
+<div class="text-center" >
+     <input href="#" type="button" class="btn btn-warning" value="Consultar Lecciones Aprendidas" 
+      onclick="google.script.run
+          .withSuccessHandler(actualizarDiv)
+          .withUserObject(this)
+          .getConsultaLecciones()"
+/>
+</div>
+</form>
+
+</body>
+</html>
